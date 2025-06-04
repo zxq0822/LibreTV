@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
         selectedAPIs = ["tyyszy","bfzy","dyttzy", "ruyi"];
         localStorage.setItem('selectedAPIs', JSON.stringify(selectedAPIs));
         
-        // 默认选中过滤开关 - 修改为默认关闭黄色内容过滤
-        localStorage.setItem('yellowFilterEnabled', 'false');
+        // 默认选中过滤开关
+        localStorage.setItem('yellowFilterEnabled', 'true');
         localStorage.setItem(PLAYER_CONFIG.adFilteringStorage, 'true');
         
         // 默认启用豆瓣功能
