@@ -1,7 +1,7 @@
 {
-    "name": "LibreTV",
-    "short_name": "LibreTV",
-    "description": "免费在线视频搜索与观看平台",
+    "name": "QingTV",
+    "short_name": "QingTV",
+    "description": "修改自LibreTV",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0f1622",
