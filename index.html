@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LibreTV - 免费在线视频搜索与观看平台</title>
-    <meta name="description" content="LibreTV是一个免费的在线视频搜索平台，无广告、安全，提供来自多个视频源的内容搜索与观看服务，无需注册即可使用。">
-    <meta name="keywords" content="在线视频,免费视频,视频搜索,电影,电视剧,LibreTV">
-    <meta name="author" content="LibreTV Team">
+    <title>QingTV</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
 
     <!-- Favicon -->
     <link rel="icon" href="image/logo.png">
@@ -179,10 +179,9 @@
             </div>
         </div>
     </div>
-
+    
     <div class="container mx-auto px-4 py-8 flex flex-col h-screen">
         <div class="flex-1 flex flex-col">
-            <!-- 网站标志和口号 -->
             <header class="text-center mb-2">
                 <div class="flex justify-center items-center mb-4">
                     <a href="#" onclick="resetToHome(); return false;" class="flex items-center">
@@ -194,7 +193,7 @@
                 </div>
                 <p class="text-gray-400 mb-8">自由观影，畅享精彩</p>
             </header>
-            
+   
 
             <div id="searchArea" class="flex-1 flex flex-col items-center justify-center">
                 <div class="w-full max-w-2xl">
@@ -299,7 +298,7 @@
                         </svg>
                         <span class="gradient-text font-bold">LibreTV</span>
                     </div>
-                    <p class="text-gray-500 text-sm mt-2 text-center md:text-left">© 2025 LibreTV - 自由观影，畅享精彩</p>
+                    <p class="text-gray-500 text-sm mt-2 text-center md:text-left">© 2025 QingTV 修改自 <a href="about.html" class="text-gray-400 hover:text-white text-sm transition-colors">LibreTV</a></p>
                 </div>
                 
                 <div class="text-center md:text-right">
@@ -307,11 +306,6 @@
                         免责声明：本站仅为视频搜索工具，不存储、上传或分发任何视频内容。
                         所有视频均来自第三方API接口。如有侵权，请联系相关内容提供方。
                     </p>
-                    <div class="mt-2 flex justify-center md:justify-end space-x-4">
-                        <a href="about.html" class="text-gray-400 hover:text-white text-sm transition-colors">关于我们</a>
-                        <a href="about.html" class="text-gray-400 hover:text-white text-sm transition-colors">隐私政策</a>
-                        <a href="https://www.msf.hk/zh-hant/donate/general?type=one-off" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 text-sm transition-colors">捐赠</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -335,7 +329,7 @@
     <div id="passwordModal" class="fixed inset-0 bg-black/95 hidden items-center justify-center z-[65] transition-opacity duration-300">
         <div class="bg-[#111] p-8 rounded-lg w-11/12 max-w-md border border-[#333] max-h-[90vh] flex flex-col">
             <div class="flex justify-between items-center mb-6 flex-none">
-                <h2 class="text-2xl font-bold gradient-text">访问验证</h2>
+                <h2 class="text-2xl font-bold gradient-text">找我要密码</h2>
             </div>
             <div class="mb-6">
                 <p class="text-gray-300 mb-4">请输入密码继续访问</p>
@@ -349,7 +343,8 @@
         </div>
     </div>
 
-    <!-- 版权声明弹窗 -->
+
+    <!-- 
     <div id="disclaimerModal" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-[60]">
         <div class="bg-[#111] p-8 rounded-lg border border-[#333] w-11/12 max-w-2xl max-h-[90vh] overflow-y-auto">
             <h2 class="text-2xl font-bold gradient-text mb-6 text-center">使用声明</h2>
@@ -374,7 +369,37 @@
             </div>
         </div>
     </div>
+-->
+<!--通知窗口-->
+    <div id="disclaimerModal" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-[60]">
+        <div class="bg-[#111] p-8 rounded-lg border border-[#333] w-11/12 max-w-2xl max-h-[90vh] overflow-y-auto">
+            <h2 class="text-2xl font-bold gradient-text mb-6 text-center">小小通知</h2>
+            <div class="text-gray-300 space-y-4">
+                <p>
+                    因为用的免费域名，所以不同地区不同运营商可能出现解析问题
+                </p>
+                <p>
+                    <strong class="text-blue-400">新增域名：</strong>
+                </p>
+                <p>
+                    <a href="https://tv.qing.so.kg" class="text-gray-400 hover:text-white text-sm transition-colors underline">https://tv.qing.so.kg</a>
+                </p>
+                <p>
+                    <a href="https://tv.zxq.xx.kg" class="text-gray-400 hover:text-white text-sm transition-colors underline">https://tv.zxq.xx.kg</a>
+                </p>
+                <p>
+                    后续会继续添加更多域名，敬请期待...
+                </p>
+            </div>
+            <div class="mt-6 flex justify-center">
+                <button id="acceptDisclaimerBtn" class="px-6 py-3 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300">
+                    朕已阅！
+                </button>
+            </div>
+        </div>
+    </div>
 
+            
     <!-- 错误提示框 -->
     <div id="toast" class="fixed top-4 left-1/2 -translate-x-1/2 bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg transform transition-all duration-300 opacity-0 -translate-y-full z-50">
         <p id="toastMessage"></p>
