@@ -1,5 +1,8 @@
 // 全局变量
-let selectedAPIs = JSON.parse(localStorage.getItem('selectedAPIs') || '["tyyszy","dyttzy", "bfzy", "ruyi"]'); // 默认选中资源
+let selectedAPIs = JSON.parse(localStorage.getItem('selectedAPIs') || JSON.stringify(
+  // 获取所有API的key并作为默认选中项
+  Object.keys(API_SITES)
+));
 let customAPIs = JSON.parse(localStorage.getItem('customAPIs') || '[]'); // 存储自定义API列表
 
 // 添加当前播放的集数索引
@@ -26,10 +29,11 @@ document.addEventListener('DOMContentLoaded', function () {
     renderSearchHistory();
 
     // 设置默认API选择（如果是第一次加载）
-    if (!localStorage.getItem('hasInitializedDefaults')) {
-        // 默认选中资源
-        selectedAPIs = ["tyyszy", "bfzy", "dyttzy", "ruyi"];
-        localStorage.setItem('selectedAPIs', JSON.stringify(selectedAPIs));
+if (!localStorage.getItem('hasInitializedDefaults')) {
+    // 默认选中所有资源
+    selectedAPIs = Object.keys(API_SITES);  // 修改这里
+    localStorage.setItem('selectedAPIs', JSON.stringify(selectedAPIs));
+    
 
         // 默认选中过滤开关
         localStorage.setItem('yellowFilterEnabled', 'true');
